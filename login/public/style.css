@@ -1,0 +1,175 @@
+/* Space out content a bit */
+body {
+  padding-top: 70px;
+  padding-bottom: 70px;
+  font-family: 'Roboto', sans-serif;
+  min-width: 360px;
+}
+
+/* Everything but the jumbotron gets side spacing for mobile first views */
+.header,
+.footer {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+
+/* Custom page header */
+.header {
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e5e5e5;
+}
+/* Make the masthead heading the same height as the navigation */
+.header h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 40px;
+}
+
+.navbar-header {
+  align-content: center;
+}
+
+.navbar-fixed-top {
+  background-image: none;
+  background-color: #5576b9;
+}
+
+.navbar-fixed-bottom {
+    background-color: #5576b9;
+}
+
+.page-header {
+  position: relative;
+  top: 0px;
+  text-align: center;
+  border-style: none;
+  margin-top: -10px;
+}
+
+.header-image {
+  max-width: 65%;
+}
+
+.filler {
+  margin-top: 100px;
+}
+
+.filler-less {
+  margin-top: 130px;
+}
+
+
+.center-content {
+  text-align: center;
+  margin: 10px;
+}
+
+.center-content-less {
+  text-align: center;
+  margin: 20px;
+}
+
+
+
+.btn {
+  padding: 0px 10px;
+  background-image: none;
+  background-color: #5576b9;
+  border-radius: 0px;
+  width: 152px;
+  height: inherit;
+  color: white;
+  -webkit-transition: background-color 2s; /* Safari 3.1 to 6.0 */
+  transition: background-color 2s;
+}
+
+.btn:hover {
+  background-color: #5576b9;
+  background-image: none;
+  text-shadow: none;
+  color: white;
+}
+
+.details {
+  display: none !important;
+}
+
+
+/* Login Form */
+.position {
+position: relative;
+top: 0;
+left: 0;
+margin-top: -30px;
+}
+
+.wrapper {    
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.form-signin {
+  max-width: 420px;
+  padding: 30px 38px 66px;
+  margin: 0 auto;
+  background-color: #eee;
+  border: 3px solid rgba(0,0,0,0.1);  
+  }
+
+.form-signin-heading {
+  text-align:center;
+  margin-bottom: 30px;
+}
+
+.form-control {
+  position: relative;
+  font-size: 16px;
+  height: auto;
+  padding: 10px;
+}
+
+input[type="email"] {
+  margin-bottom: 0px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+input[type="password"] {
+  margin-bottom: 20px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+
+/* Custom page footer */
+.footer {
+}
+
+/* Customize container */
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+  .header-image {
+  max-width: 10%;
+}
+}
+
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+  /* Remove the padding we set earlier */
+  .header,
+  .footer {
+    padding-right: 0;
+    padding-left: 0;
+  }
+  /* Space out the masthead */
+  .header {
+    margin-bottom: 30px;
+  }
+  .header-image {
+  max-width: 55%;
+}
+}
