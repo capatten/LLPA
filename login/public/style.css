@@ -6,6 +6,10 @@ body {
   min-width: 360px;
 }
 
+p.italic {
+  font-style: italic;
+}
+
 /* Everything but the jumbotron gets side spacing for mobile first views */
 .header,
 .footer {
