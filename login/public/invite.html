@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="Loveland Living Planet Aquarium">
+    <meta name="author" content="Employee App">
+
+    <title>LLPA Employee App</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100" rel="stylesheet">
+
+    <!-- Custom styles -->
+    <link href="style.css" rel="stylesheet">
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  <script src="https://www.gstatic.com/firebasejs/4.0.0/firebase.js"></script>
+  <script type="text/javascript">
+
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyAfZr1qIuEMeDEEriFeoKj-x863RIbJJgA",
+    authDomain: "llpa-ae9e7.firebaseapp.com",
+    databaseURL: "https://llpa-ae9e7.firebaseio.com",
+    projectId: "llpa-ae9e7",
+    storageBucket: "llpa-ae9e7.appspot.com",
+    messagingSenderId: "100503483723"
+  };
+
+  firebase.initializeApp(config);
+
+    /**
+     * Handles the Invite button press.
+     */
+    function handleInvite() {
+      var email = document.getElementById('txtEmail').value;
+
+      if (email.length < 4) {
+        alert('Please enter a valid email address.');
+        return;
+      }
+      else {
+        alert('Send Invite to ' + email);
+        window.location = "";
+      var subject = ('Employee Invitation');
+      var cc = ('abc@abcmail.com');
+      var bcc = ('abc@abcmail.com');
+      var body = ('I am the body of the feedback that you are sending.');
+      document.write( '<a href="mailto:' + email + '?subject=' +subject+ '&cc=' +cc+ '&bcc=' +bcc+ '&body=' +body+ '">' + 'Click here to confirm Invite' + '<' + '/a>');
+        return;
+      }
+    };
+
+    /**
+     * initApp handles setting up UI event listeners and registering Firebase auth listeners:
+     *  - firebase.auth().onAuthStateChanged: This listener is called when the user is signed in or
+     *    out, and that is where we update the UI.
+     */
+    function initApp() {
+      document.getElementById('employee-invite').addEventListener('click', handleInvite, false);
+    };
+
+    window.onload = function() {
+      initApp();
+    };
+  </script>
+
+  </head>
+
+  <body>
+
+    <div class="container">
+      <nav class="navbar navbar-fixed-top">
+        <div class="container-fluid">
+          <div class="navbar-header">
+          </div>
+        </div>
+      </nav>
+
+    <div class="row">
+      <div class="col-md-12">
+        <div class="page-header">
+          <img class="header-image" alt="LLPA Logo" src="images/logo.png" >
+        </div>
+      </div> 
+    </div>
+
+      <div class = "container">
+        <div class="wrapper">
+          <div class="form-signin"> 
+              <h3 class="form-signin-heading">Invite Employee to Create Profile</h3>
+              
+              <input id="txtEmail" type="email" class="form-control" name="txtEmail" placeholder="Enter Employee Email Adress" required="" autofocus="" />        
+             <br />
+            <button id="employee-invite" class="btn btn-action">Send Invite</button>      
+          </div>     
+        </div>
+      </div>
+
+
+ 
+
+      <footer class="footer">
+        <nav class="navbar navbar-fixed-bottom">
+          <div class="container-fluid">
+            <div class="navbar-header">
+            </div>
+          </div>
+        </nav>
+      </footer>
+
+    </div> <!-- /container -->
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.7.2/firebase.js"></script>
+  </body>
+</html>
